@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Zap, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import logoJouleTech from "@/assets/logo-joule-tech.jpeg";
 import { cn } from "@/lib/utils";
 import {
   DropdownMenu,
@@ -80,13 +81,11 @@ export function Navbar({ onOpenContact }: NavbarProps) {
       <div className="container-custom flex items-center justify-between px-4 md:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg group-hover:shadow-glow transition-shadow duration-300">
-            <Zap className="w-6 h-6 text-primary-foreground" />
-          </div>
-          <div className="flex flex-col">
-            <span className={cn("text-xl font-bold transition-colors duration-300", useWhiteText ? "text-white" : "text-foreground")}>Joule Tech</span>
-            <span className={cn("text-xs -mt-1 transition-colors duration-300", useWhiteText ? "text-white/70" : "text-muted-foreground")}>Électricité & Pompage</span>
-          </div>
+          <img 
+            src={logoJouleTech} 
+            alt="Joule Tech Logo" 
+            className="h-12 w-auto rounded-lg shadow-lg group-hover:shadow-glow transition-shadow duration-300"
+          />
         </Link>
 
         {/* Desktop Navigation */}

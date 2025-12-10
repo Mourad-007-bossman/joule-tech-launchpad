@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Zap, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import logoJouleTech from "@/assets/logo-joule-tech.jpeg";
 
 const services = [
   { href: "/services/installation-station-pompage", label: "Installation Station Pompage" },
@@ -26,13 +27,11 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
-                <Zap className="w-6 h-6 text-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-background">Joule Tech</span>
-                <span className="text-xs text-background/60 -mt-1">Électricité & Pompage</span>
-              </div>
+              <img 
+                src={logoJouleTech} 
+                alt="Joule Tech Logo" 
+                className="h-14 w-auto rounded-lg"
+              />
             </Link>
             <p className="text-background/70 text-sm leading-relaxed mb-6">
               Expert en installation électrique industrielle, stations de pompage et automatismes à Tanger. Plus de 200 projets réalisés avec succès.
