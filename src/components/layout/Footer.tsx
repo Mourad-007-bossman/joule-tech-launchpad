@@ -37,11 +37,11 @@ export function Footer() {
               Expert en installation électrique industrielle, stations de pompage et automatismes à Tanger. Plus de 200 projets réalisés avec succès.
             </p>
             <div className="flex flex-col gap-3">
-              <a href="tel:+212663339585" className="flex items-center gap-3 text-background/80 hover:text-secondary transition-colors">
+              <a href="tel:+212663339585" className="flex items-center gap-3 text-background/80 hover:text-accent transition-colors">
                 <Phone className="w-5 h-5" />
                 <span>+212 6 63 33 95 85</span>
               </a>
-              <a href="mailto:info@joule-tech.ma" className="flex items-center gap-3 text-background/80 hover:text-secondary transition-colors">
+              <a href="mailto:info@joule-tech.ma" className="flex items-center gap-3 text-background/80 hover:text-accent transition-colors">
                 <Mail className="w-5 h-5" />
                 <span>info@joule-tech.ma</span>
               </a>
@@ -60,7 +60,7 @@ export function Footer() {
                 <li key={service.href}>
                   <Link
                     to={service.href}
-                    className="text-sm text-background/70 hover:text-secondary transition-colors"
+                    className="text-sm text-background/70 hover:text-accent transition-colors"
                   >
                     {service.label}
                   </Link>
@@ -77,7 +77,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-background/70 hover:text-secondary transition-colors"
+                    className="text-sm text-background/70 hover:text-accent transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -92,11 +92,11 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-background/70">
               <li className="flex justify-between">
                 <span>Lundi - Vendredi</span>
-                <span className="text-secondary">08:00 - 18:00</span>
+                <span className="text-accent">08:00 - 18:00</span>
               </li>
               <li className="flex justify-between">
                 <span>Samedi</span>
-                <span className="text-secondary">08:00 - 12:00</span>
+                <span className="text-accent">08:00 - 12:00</span>
               </li>
               <li className="flex justify-between">
                 <span>Dimanche</span>
@@ -121,10 +121,10 @@ export function Footer() {
             © {new Date().getFullYear()} Joule Tech. Tous droits réservés.
           </p>
           <div className="flex items-center gap-6 text-sm text-background/60">
-            <Link to="/mentions-legales" className="hover:text-secondary transition-colors">
+            <Link to="/mentions-legales" className="hover:text-accent transition-colors">
               Mentions Légales
             </Link>
-            <Link to="/politique-confidentialite" className="hover:text-secondary transition-colors">
+            <Link to="/politique-confidentialite" className="hover:text-accent transition-colors">
               Confidentialité
             </Link>
           </div>
