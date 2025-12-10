@@ -7,7 +7,9 @@ import { StickyCTA } from "@/components/StickyCTA";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Calendar, CheckCircle2, Waves, Zap, Factory } from "lucide-react";
-
+import projectPompage from "@/assets/project-pompage.jpg";
+import projectArmoire from "@/assets/project-armoire.jpg";
+import projectAutomate from "@/assets/project-automate.jpg";
 const projects = [
   {
     id: 1,
@@ -25,7 +27,7 @@ const projects = [
       "Système de supervision SCADA",
     ],
     results: "Réduction de 30% de la consommation énergétique grâce aux variateurs",
-    image: "bg-gradient-to-br from-secondary/30 to-primary/20",
+    image: projectPompage,
   },
   {
     id: 2,
@@ -43,7 +45,7 @@ const projects = [
       "Groupe électrogène 800 kVA",
     ],
     results: "Certification conformité électrique NFC 15-100 obtenue",
-    image: "bg-gradient-to-br from-primary/30 to-accent/20",
+    image: projectArmoire,
   },
   {
     id: 3,
@@ -61,7 +63,7 @@ const projects = [
       "Traçabilité production",
     ],
     results: "Augmentation de 40% de la cadence de production",
-    image: "bg-gradient-to-br from-accent/30 to-secondary/20",
+    image: projectAutomate,
   },
 ];
 
@@ -111,9 +113,15 @@ const Projects = () => {
                 >
                   <div className="grid lg:grid-cols-2">
                     {/* Image */}
-                    <div className={`${project.image} min-h-[300px] lg:min-h-[400px] flex items-center justify-center p-8`}>
-                      <div className="w-32 h-32 rounded-2xl bg-card/90 backdrop-blur flex items-center justify-center shadow-lg">
-                        <project.icon className="w-16 h-16 text-primary" />
+                    <div className="relative min-h-[300px] lg:min-h-[400px] overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={`${project.title} - Joule Tech électricité industrielle Tanger`}
+                        className="w-full h-full object-cover absolute inset-0"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                      <div className="absolute bottom-4 left-4 w-16 h-16 rounded-xl bg-card/90 backdrop-blur flex items-center justify-center shadow-lg">
+                        <project.icon className="w-8 h-8 text-primary" />
                       </div>
                     </div>
 

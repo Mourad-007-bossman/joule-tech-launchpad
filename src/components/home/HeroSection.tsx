@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, CheckCircle2, Zap } from "lucide-react";
+import heroImage from "@/assets/hero-industrial.jpg";
 
 interface HeroSectionProps {
   onOpenContact: () => void;
@@ -84,15 +85,13 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
           {/* Hero Visual */}
           <div className="hidden lg:flex items-center justify-center animate-fade-up" style={{ animationDelay: "0.5s" }}>
             <div className="relative">
-              {/* Main card */}
-              <div className="glass-card rounded-3xl p-8 bg-primary-foreground/10 border-primary-foreground/20">
-                <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-secondary/30 to-accent/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <Zap className="w-24 h-24 text-primary-foreground/80 mx-auto mb-4 animate-float" />
-                    <p className="text-primary-foreground/80 text-lg font-medium">Excellence Électrique</p>
-                    <p className="text-primary-foreground/60 text-sm">Depuis 2010</p>
-                  </div>
-                </div>
+              {/* Main image */}
+              <div className="glass-card rounded-3xl overflow-hidden bg-primary-foreground/10 border-primary-foreground/20">
+                <img 
+                  src={heroImage} 
+                  alt="Installation électrique industrielle et station de pompage à Tanger - Joule Tech" 
+                  className="w-[450px] h-[350px] object-cover"
+                />
               </div>
 
               {/* Floating cards */}
