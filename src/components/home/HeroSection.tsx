@@ -74,10 +74,10 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
               </Button>
               <a
                 href="tel:+212663339585"
-                className="flex items-center gap-2 px-6 py-4 rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground font-semibold hover:bg-primary-foreground/20 transition-all duration-300 w-full sm:w-auto justify-center"
+                className="flex items-center gap-2 px-6 py-4 rounded-xl bg-white/20 border border-white/30 text-white font-semibold hover:bg-white/30 transition-all duration-300 w-full sm:w-auto justify-center whitespace-nowrap backdrop-blur-sm"
               >
-                <Phone className="w-5 h-5" />
-                +212 6 63 33 95 85
+                <Phone className="w-5 h-5 flex-shrink-0" />
+                <span className="whitespace-nowrap">+212 6 63 33 95 85</span>
               </a>
             </div>
           </div>
