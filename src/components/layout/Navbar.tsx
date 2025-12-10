@@ -49,8 +49,8 @@ export function Navbar({ onOpenContact }: NavbarProps) {
             <Zap className="w-6 h-6 text-primary-foreground" />
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold text-foreground">Joule Tech</span>
-            <span className="text-xs text-muted-foreground -mt-1">Électricité & Pompage</span>
+            <span className={cn("text-xl font-bold transition-colors duration-300", isScrolled ? "text-foreground" : "text-white")}>Joule Tech</span>
+            <span className={cn("text-xs -mt-1 transition-colors duration-300", isScrolled ? "text-muted-foreground" : "text-white/70")}>Électricité & Pompage</span>
           </div>
         </Link>
 
@@ -63,8 +63,8 @@ export function Navbar({ onOpenContact }: NavbarProps) {
               className={cn(
                 "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
                 location.pathname === link.href
-                  ? "bg-primary/10 text-primary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  ? isScrolled ? "bg-primary/10 text-primary" : "bg-white/10 text-white"
+                  : isScrolled ? "text-muted-foreground hover:text-foreground hover:bg-muted" : "text-white/80 hover:text-white hover:bg-white/10"
               )}
             >
               {link.label}
@@ -74,7 +74,7 @@ export function Navbar({ onOpenContact }: NavbarProps) {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+212663339585" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+          <a href="tel:+212663339585" className={cn("flex items-center gap-2 text-sm font-medium transition-colors", isScrolled ? "text-muted-foreground hover:text-primary" : "text-white/80 hover:text-white")}>
             <Phone className="w-4 h-4" />
             <span>+212 6 63 33 95 85</span>
           </a>
@@ -85,14 +85,14 @@ export function Navbar({ onOpenContact }: NavbarProps) {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+          className={cn("lg:hidden p-2 rounded-lg transition-colors", isScrolled ? "hover:bg-muted" : "hover:bg-white/10")}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className="w-6 h-6 text-foreground" />
+            <X className={cn("w-6 h-6", isScrolled ? "text-foreground" : "text-white")} />
           ) : (
-            <Menu className="w-6 h-6 text-foreground" />
+            <Menu className={cn("w-6 h-6", isScrolled ? "text-foreground" : "text-white")} />
           )}
         </button>
       </div>
