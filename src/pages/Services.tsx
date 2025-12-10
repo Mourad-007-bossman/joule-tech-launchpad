@@ -43,20 +43,12 @@ const services = [
     color: "secondary",
   },
   {
-    icon: Settings,
-    title: "Programmation Sofrel S4W",
-    description: "Expert en programmation Sofrel S4W pour télégestion de réseaux d'eau et assainissement. Configuration, paramétrage et maintenance des équipements Lacroix.",
-    features: ["Télégestion eau potable", "Assainissement", "Alarmes SMS", "Supervision à distance"],
-    href: "/services/programmation-sofrel-s4w-tanger",
-    color: "primary",
-  },
-  {
     icon: Wrench,
     title: "Maintenance Industrielle",
     description: "Contrats de maintenance préventive et curative pour vos installations électriques. Interventions rapides 24/7 et audit énergétique.",
     features: ["Maintenance préventive", "Dépannage urgent", "Audit électrique", "Thermographie"],
     href: "/services/maintenance-industrielle",
-    color: "accent",
+    color: "primary",
   },
   {
     icon: Factory,
@@ -64,7 +56,7 @@ const services = [
     description: "Installation et mise en service de machines industrielles. Raccordement électrique, pneumatique et mise au point production.",
     features: ["Machines-outils", "Lignes production", "Convoyeurs", "Robots industriels"],
     href: "/services/installation-reparation-machine-industrielle",
-    color: "secondary",
+    color: "accent",
   },
   {
     icon: FileText,
@@ -72,7 +64,7 @@ const services = [
     description: "Études techniques complètes pour projets électriques industriels. Schémas unifilaires, notes de calcul, cahiers des charges et suivi de chantier.",
     features: ["Schémas électriques", "Notes de calcul", "Cahier des charges", "Suivi travaux"],
     href: "/services/etudes-installation-electrique-tanger",
-    color: "primary",
+    color: "secondary",
   },
 ];
 

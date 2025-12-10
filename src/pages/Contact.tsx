@@ -16,10 +16,24 @@ import { toast } from "@/hooks/use-toast";
 const contactInfo = [
   {
     icon: Phone,
-    title: "Téléphone",
+    title: "Téléphone Mobile",
     value: "+212 6 63 33 95 85",
     href: "tel:+212663339585",
+    description: "WhatsApp disponible",
+  },
+  {
+    icon: Phone,
+    title: "Téléphone Fixe",
+    value: "05 31 31 82 82",
+    href: "tel:+212531318282",
     description: "Du lundi au vendredi, 8h-18h",
+  },
+  {
+    icon: Phone,
+    title: "Fax",
+    value: "05 31 97 87 92",
+    href: null,
+    description: "Envoi de documents",
   },
   {
     icon: Mail,
@@ -129,7 +143,7 @@ const Contact = () => {
         {/* Contact Info Cards */}
         <section className="py-12 -mt-8 relative z-20">
           <div className="container-custom px-4 md:px-8">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {contactInfo.map((info) => (
                 <a
                   key={info.title}
