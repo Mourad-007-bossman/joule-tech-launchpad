@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* Joule Tech Brand Colors */
+    /* Joule Tech Brand Colors - Based on Logo */
     --background: 210 20% 98%;
     --foreground: 220 60% 15%;
 
@@ -16,42 +16,42 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 60% 15%;
 
-    /* Primary - Deep Blue */
-    --primary: 220 85% 30%;
+    /* Primary - Deep Navy Blue (from logo letters) */
+    --primary: 220 70% 25%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Turquoise */
-    --secondary: 180 100% 32%;
+    /* Secondary - Blue for variety */
+    --secondary: 210 80% 45%;
     --secondary-foreground: 0 0% 100%;
 
     /* Muted */
     --muted: 210 20% 96%;
     --muted-foreground: 220 15% 45%;
 
-    /* Accent - Copper/Gold */
-    --accent: 28 55% 50%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent - Warm Yellow/Gold (from logo background) */
+    --accent: 45 90% 50%;
+    --accent-foreground: 220 70% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 20% 88%;
     --input: 220 20% 88%;
-    --ring: 220 85% 30%;
+    --ring: 220 70% 25%;
 
     --radius: 0.75rem;
 
     /* Custom Design Tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(220 85% 30%) 0%, hsl(220 85% 20%) 50%, hsl(180 100% 25%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 70% 25%) 0%, hsl(220 70% 18%) 50%, hsl(210 80% 35%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(28 55% 50%) 0%, hsl(28 65% 45%) 100%);
-    --gradient-turquoise: linear-gradient(135deg, hsl(180 100% 32%) 0%, hsl(180 80% 28%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(45 90% 50%) 0%, hsl(40 85% 45%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(210 80% 45%) 0%, hsl(210 70% 40%) 100%);
     
     --shadow-sm: 0 2px 8px -2px hsl(220 60% 15% / 0.08);
     --shadow-md: 0 8px 24px -8px hsl(220 60% 15% / 0.12);
     --shadow-lg: 0 16px 48px -12px hsl(220 60% 15% / 0.16);
-    --shadow-glow: 0 0 40px hsl(180 100% 32% / 0.2);
-    --shadow-accent: 0 8px 24px -8px hsl(28 55% 50% / 0.4);
+    --shadow-glow: 0 0 40px hsl(45 90% 50% / 0.3);
+    --shadow-accent: 0 8px 24px -8px hsl(45 90% 50% / 0.4);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -73,24 +73,24 @@
     --popover: 220 40% 12%;
     --popover-foreground: 210 20% 98%;
 
-    --primary: 180 100% 40%;
+    --primary: 45 90% 55%;
     --primary-foreground: 220 40% 8%;
 
-    --secondary: 220 85% 45%;
+    --secondary: 210 80% 50%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 30% 18%;
     --muted-foreground: 210 15% 65%;
 
-    --accent: 28 55% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 85% 60%;
+    --accent-foreground: 220 40% 10%;
 
     --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 30% 20%;
     --input: 220 30% 20%;
-    --ring: 180 100% 40%;
+    --ring: 45 90% 55%;
   }
 }
 
@@ -139,7 +139,7 @@
   }
 
   .btn-gradient-secondary {
-    background: var(--gradient-turquoise);
+    background: var(--gradient-secondary);
     @apply text-secondary-foreground shadow-md hover:shadow-lg transition-all duration-300;
   }
 
