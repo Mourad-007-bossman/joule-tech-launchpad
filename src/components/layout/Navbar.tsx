@@ -21,6 +21,13 @@ export function Navbar({ onOpenContact }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Pages with dark hero backgrounds where white text works
+  const darkHeroPages = ["/"];
+  const hasDarkHero = darkHeroPages.includes(location.pathname);
+  
+  // Use dark text on light pages when not scrolled
+  const useWhiteText = hasDarkHero && !isScrolled;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -49,8 +56,8 @@ export function Navbar({ onOpenContact }: NavbarProps) {
             <Zap className="w-6 h-6 text-primary-foreground" />
           </div>
           <div className="flex flex-col">
-            <span className={cn("text-xl font-bold transition-colors duration-300", isScrolled ? "text-foreground" : "text-white")}>Joule Tech</span>
-            <span className={cn("text-xs -mt-1 transition-colors duration-300", isScrolled ? "text-muted-foreground" : "text-white/70")}>Électricité & Pompage</span>
+            <span className={cn("text-xl font-bold transition-colors duration-300", useWhiteText ? "text-white" : "text-foreground")}>Joule Tech</span>
+            <span className={cn("text-xs -mt-1 transition-colors duration-300", useWhiteText ? "text-white/70" : "text-muted-foreground")}>Électricité & Pompage</span>
           </div>
         </Link>
 
@@ -63,8 +70,8 @@ export function Navbar({ onOpenContact }: NavbarProps) {
               className={cn(
                 "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
                 location.pathname === link.href
-                  ? isScrolled ? "bg-primary/10 text-primary" : "bg-white/10 text-white"
-                  : isScrolled ? "text-muted-foreground hover:text-foreground hover:bg-muted" : "text-white/80 hover:text-white hover:bg-white/10"
+                  ? useWhiteText ? "bg-white/10 text-white" : "bg-primary/10 text-primary"
+                  : useWhiteText ? "text-white/80 hover:text-white hover:bg-white/10" : "text-muted-foreground hover:text-foreground hover:bg-muted"
               )}
             >
               {link.label}
@@ -74,7 +81,7 @@ export function Navbar({ onOpenContact }: NavbarProps) {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+212663339585" className={cn("flex items-center gap-2 text-sm font-medium transition-colors", isScrolled ? "text-muted-foreground hover:text-primary" : "text-white/80 hover:text-white")}>
+          <a href="tel:+212663339585" className={cn("flex items-center gap-2 text-sm font-medium transition-colors", useWhiteText ? "text-white/80 hover:text-white" : "text-muted-foreground hover:text-primary")}>
             <Phone className="w-4 h-4" />
             <span>+212 6 63 33 95 85</span>
           </a>
@@ -85,14 +92,14 @@ export function Navbar({ onOpenContact }: NavbarProps) {
 
         {/* Mobile Menu Button */}
         <button
-          className={cn("lg:hidden p-2 rounded-lg transition-colors", isScrolled ? "hover:bg-muted" : "hover:bg-white/10")}
+          className={cn("lg:hidden p-2 rounded-lg transition-colors", useWhiteText ? "hover:bg-white/10" : "hover:bg-muted")}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className={cn("w-6 h-6", isScrolled ? "text-foreground" : "text-white")} />
+            <X className={cn("w-6 h-6", useWhiteText ? "text-white" : "text-foreground")} />
           ) : (
-            <Menu className={cn("w-6 h-6", isScrolled ? "text-foreground" : "text-white")} />
+            <Menu className={cn("w-6 h-6", useWhiteText ? "text-white" : "text-foreground")} />
           )}
         </button>
       </div>
