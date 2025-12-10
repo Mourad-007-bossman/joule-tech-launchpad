@@ -8,6 +8,7 @@ import { StickyCTA } from "@/components/StickyCTA";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, CheckCircle2, Cpu, Monitor, Settings, RefreshCw } from "lucide-react";
+import serviceImage from "@/assets/service-programmation-automate.jpg";
 
 const features = [
   {
@@ -75,21 +76,30 @@ const ProgrammationAutomateTanger = () => {
             <div className="absolute top-20 right-20 w-64 h-64 bg-accent rounded-full blur-3xl" />
           </div>
           <div className="container-custom relative z-10 px-4 md:px-8">
-            <div className="max-w-3xl">
-              <div className="w-16 h-16 rounded-xl bg-primary-foreground/10 flex items-center justify-center mb-6">
-                <Cpu className="w-8 h-8 text-primary-foreground" />
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="w-16 h-16 rounded-xl bg-primary-foreground/10 flex items-center justify-center mb-6">
+                  <Cpu className="w-8 h-8 text-primary-foreground" />
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+                  Programmation Automate à Tanger
+                </h1>
+                <p className="text-xl text-primary-foreground/80 mb-8">
+                  Expert en programmation d'automates programmables industriels à Tanger. 
+                  Siemens, Schneider, Allen-Bradley : nous maîtrisons toutes les plateformes.
+                </p>
+                <Button variant="hero" size="xl" onClick={() => setIsContactOpen(true)}>
+                  Demander un Devis Gratuit
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                Programmation Automate à Tanger
-              </h1>
-              <p className="text-xl text-primary-foreground/80 mb-8">
-                Expert en programmation d'automates programmables industriels à Tanger. 
-                Siemens, Schneider, Allen-Bradley : nous maîtrisons toutes les plateformes.
-              </p>
-              <Button variant="hero" size="xl" onClick={() => setIsContactOpen(true)}>
-                Demander un Devis Gratuit
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+              <div className="hidden lg:block">
+                <img 
+                  src={serviceImage} 
+                  alt="Programmation automate programmable à Tanger" 
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
