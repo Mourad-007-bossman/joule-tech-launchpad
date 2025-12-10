@@ -28,7 +28,6 @@ const serviceLinks = [
   { href: "/services/installation-reparation-machine-industrielle", label: "Installation Machine Industrielle" },
   { href: "/services/etudes-installation-electrique-tanger", label: "Études Installation Électrique" },
   { href: "/services/installation-electrique", label: "Installation Électrique" },
-  { href: "/services/programmation-sofrel-s4w-tanger", label: "Programmation Sofrel S4W" },
 ];
 
 interface NavbarProps {
