@@ -1,15 +1,33 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Zap } from "lucide-react";
+import { Menu, X, Phone, Zap, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
-  { href: "/services", label: "Services" },
   { href: "/projets", label: "Projets" },
   { href: "/about", label: "À propos" },
   { href: "/contact", label: "Contact" },
+];
+
+const serviceLinks = [
+  { href: "/services", label: "Tous les Services" },
+  { href: "/services/installation-station-pompage", label: "Installation Station Pompage" },
+  { href: "/services/electricite-industrielle-tanger", label: "Électricité Industrielle" },
+  { href: "/services/cablage-armoire-electrique-tanger", label: "Câblage Armoire Électrique" },
+  { href: "/services/programmation-automate-tanger", label: "Programmation Automate" },
+  { href: "/services/maintenance-industrielle", label: "Maintenance Industrielle" },
+  { href: "/services/installation-reparation-machine-industrielle", label: "Installation Machine Industrielle" },
+  { href: "/services/etudes-installation-electrique-tanger", label: "Études Installation Électrique" },
+  { href: "/services/installation-electrique", label: "Installation Électrique" },
+  { href: "/services/programmation-sofrel-s4w-tanger", label: "Programmation Sofrel S4W" },
 ];
 
 interface NavbarProps {
@@ -19,6 +37,7 @@ interface NavbarProps {
 export function Navbar({ onOpenContact }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
 
   // Pages with dark hero backgrounds where white text works
@@ -38,7 +57,10 @@ export function Navbar({ onOpenContact }: NavbarProps) {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setIsServicesOpen(false);
   }, [location]);
+
+  const isServicePage = location.pathname.startsWith("/services");
 
   return (
     <header
@@ -63,7 +85,51 @@ export function Navbar({ onOpenContact }: NavbarProps) {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
+          <Link
+            to="/"
+            className={cn(
+              "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
+              location.pathname === "/"
+                ? useWhiteText ? "bg-white/10 text-white" : "bg-primary/10 text-primary"
+                : useWhiteText ? "text-white/80 hover:text-white hover:bg-white/10" : "text-muted-foreground hover:text-foreground hover:bg-muted"
+            )}
+          >
+            Accueil
+          </Link>
+          
+          {/* Services Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button
+                className={cn(
+                  "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-1",
+                  isServicePage
+                    ? useWhiteText ? "bg-white/10 text-white" : "bg-primary/10 text-primary"
+                    : useWhiteText ? "text-white/80 hover:text-white hover:bg-white/10" : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                )}
+              >
+                Services
+                <ChevronDown className="w-4 h-4" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-64">
+              {serviceLinks.map((link) => (
+                <DropdownMenuItem key={link.href} asChild>
+                  <Link
+                    to={link.href}
+                    className={cn(
+                      "w-full cursor-pointer",
+                      location.pathname === link.href && "bg-primary/10 text-primary"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          {navLinks.slice(1).map((link) => (
             <Link
               key={link.href}
               to={link.href}
@@ -108,11 +174,61 @@ export function Navbar({ onOpenContact }: NavbarProps) {
       <div
         className={cn(
           "lg:hidden absolute top-full left-0 right-0 bg-card/98 backdrop-blur-xl border-b border-border shadow-lg transition-all duration-300 overflow-hidden",
-          isMobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+          isMobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
         )}
       >
-        <nav className="flex flex-col p-4 gap-1">
-          {navLinks.map((link) => (
+        <nav className="flex flex-col p-4 gap-1 max-h-[calc(100vh-80px)] overflow-y-auto">
+          <Link
+            to="/"
+            className={cn(
+              "px-4 py-3 rounded-lg text-base font-medium transition-all duration-200",
+              location.pathname === "/"
+                ? "bg-primary/10 text-primary"
+                : "text-muted-foreground hover:text-foreground hover:bg-muted"
+            )}
+          >
+            Accueil
+          </Link>
+
+          {/* Services Section Mobile */}
+          <div className="flex flex-col">
+            <button
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+              className={cn(
+                "px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 flex items-center justify-between",
+                isServicePage
+                  ? "bg-primary/10 text-primary"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+              )}
+            >
+              Services
+              <ChevronDown className={cn("w-5 h-5 transition-transform", isServicesOpen && "rotate-180")} />
+            </button>
+            
+            <div className={cn(
+              "overflow-hidden transition-all duration-300",
+              isServicesOpen ? "max-h-[500px]" : "max-h-0"
+            )}>
+              <div className="pl-4 flex flex-col gap-1 py-2">
+                {serviceLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className={cn(
+                      "px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200",
+                      location.pathname === link.href
+                        ? "bg-primary/10 text-primary"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {navLinks.slice(1).map((link) => (
             <Link
               key={link.href}
               to={link.href}
@@ -126,6 +242,7 @@ export function Navbar({ onOpenContact }: NavbarProps) {
               {link.label}
             </Link>
           ))}
+          
           <div className="mt-4 pt-4 border-t border-border flex flex-col gap-3">
             <a
               href="tel:+212663339585"
