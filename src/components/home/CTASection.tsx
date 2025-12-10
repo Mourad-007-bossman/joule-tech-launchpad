@@ -9,9 +9,9 @@ export function CTASection({ onOpenContact }: CTASectionProps) {
   return (
     <section className="section-padding relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-secondary">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent/80">
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent/30 rounded-full blur-3xl" />
         
         {/* Pattern */}
         <div 

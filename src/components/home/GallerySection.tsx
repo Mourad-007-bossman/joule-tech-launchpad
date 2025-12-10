@@ -77,7 +77,7 @@ export function GallerySection() {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
             Portfolio
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -151,7 +151,7 @@ export function GallerySection() {
 
                 {/* Info */}
                 <div className="p-6 bg-background">
-                  <span className="text-sm text-secondary uppercase tracking-wider">
+                  <span className="text-sm text-accent uppercase tracking-wider">
                     {galleryItems[selectedIndex].category}
                   </span>
                   <h3 className="text-xl font-bold text-foreground mt-1">

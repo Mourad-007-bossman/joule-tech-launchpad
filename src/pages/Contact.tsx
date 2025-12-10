@@ -310,7 +310,7 @@ const Contact = () => {
                   <ul className="grid grid-cols-2 gap-2">
                     {["Tanger", "Tétouan", "Larache", "Asilah", "Fnideq", "M'diq", "Chefchaouen", "Ksar el-Kébir"].map((city) => (
                       <li key={city} className="flex items-center gap-2 text-sm text-foreground">
-                        <MapPin className="w-4 h-4 text-secondary flex-shrink-0" />
+                        <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
                         {city}
                       </li>
                     ))}

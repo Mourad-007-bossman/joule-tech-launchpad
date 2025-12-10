@@ -46,7 +46,7 @@ export function AboutSection() {
             <ul className="grid sm:grid-cols-2 gap-3 mb-8">
               {strengths.map((strength, index) => (
                 <li key={index} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="text-sm text-foreground">{strength}</span>
                 </li>
               ))}
@@ -70,7 +70,7 @@ export function AboutSection() {
                   className="glass-card rounded-2xl p-6 flex items-center gap-5 card-hover"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
                     <stat.icon className="w-8 h-8 text-primary-foreground" />
                   </div>
                   <div>
@@ -82,7 +82,7 @@ export function AboutSection() {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -z-10 top-10 -right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
+            <div className="absolute -z-10 top-10 -right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
             <div className="absolute -z-10 bottom-10 -left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl" />
           </div>
         </div>

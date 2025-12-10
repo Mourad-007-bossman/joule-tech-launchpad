@@ -82,7 +82,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden bg-card border-border">
         {/* Header */}
-        <div className="bg-gradient-to-r from-primary to-secondary p-6 text-primary-foreground">
+        <div className="bg-gradient-to-r from-primary to-accent p-6 text-primary-foreground">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-primary-foreground">
               {step === 3 ? "Merci !" : "Demander un Devis Gratuit"}
@@ -244,8 +244,8 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
           {step === 3 && (
             <div className="text-center py-6">
-              <div className="w-20 h-20 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-6">
-                <CheckCircle2 className="w-10 h-10 text-secondary" />
+              <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6">
+                <CheckCircle2 className="w-10 h-10 text-accent" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Demande envoyée !</h3>
               <p className="text-muted-foreground mb-6">

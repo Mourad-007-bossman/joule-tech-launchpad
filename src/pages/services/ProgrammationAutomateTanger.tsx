@@ -138,7 +138,7 @@ const ProgrammationAutomateTanger = () => {
                 <div className="grid sm:grid-cols-2 gap-6">
                   {features.map((feature) => (
                     <div key={feature.title} className="glass-card rounded-xl p-6">
-                      <div className="w-12 h-12 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center mb-4">
+                      <div className="w-12 h-12 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-4">
                         <feature.icon className="w-6 h-6" />
                       </div>
                       <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
@@ -153,7 +153,7 @@ const ProgrammationAutomateTanger = () => {
                   <ul className="grid sm:grid-cols-2 gap-3">
                     {benefits.map((benefit) => (
                       <li key={benefit} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-foreground">{benefit}</span>
                       </li>
                     ))}
