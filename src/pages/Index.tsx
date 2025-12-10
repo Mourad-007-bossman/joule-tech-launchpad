@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { AboutSection } from "@/components/home/AboutSection";
+import { GallerySection } from "@/components/home/GallerySection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
 import { ContactModal } from "@/components/ContactModal";
@@ -25,6 +26,7 @@ const Index = () => {
         <HeroSection onOpenContact={() => setIsContactOpen(true)} />
         <ServicesSection />
         <AboutSection />
+        <GallerySection />
         <TestimonialsSection />
         <CTASection onOpenContact={() => setIsContactOpen(true)} />
       </main>
