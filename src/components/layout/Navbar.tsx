@@ -41,10 +41,16 @@ export function Navbar({ onOpenContact }: NavbarProps) {
   const location = useLocation();
 
   // Pages with dark hero backgrounds where white text works
-  const darkHeroPages = ["/"];
-  const hasDarkHero = darkHeroPages.includes(location.pathname);
+  const darkHeroPages = [
+    "/",
+    "/services",
+    "/projets",
+    "/about",
+    "/contact",
+  ];
+  const hasDarkHero = darkHeroPages.includes(location.pathname) || location.pathname.startsWith("/services/");
   
-  // Use dark text on light pages when not scrolled
+  // Use white text on dark hero pages when not scrolled
   const useWhiteText = hasDarkHero && !isScrolled;
 
   useEffect(() => {
