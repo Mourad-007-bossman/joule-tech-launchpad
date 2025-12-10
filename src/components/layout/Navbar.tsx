@@ -179,7 +179,7 @@ export function Navbar({ onOpenContact }: NavbarProps) {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "lg:hidden absolute top-full left-0 right-0 bg-card/98 backdrop-blur-xl border-b border-border shadow-lg transition-all duration-300 overflow-hidden",
+          "lg:hidden absolute top-full left-0 right-0 bg-card border-b border-border shadow-lg transition-all duration-300 overflow-hidden",
           isMobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
         )}
       >
