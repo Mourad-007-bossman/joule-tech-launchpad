@@ -10,7 +10,7 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
   const features = [
     "Installation électrique industrielle",
     "Stations de pompage clé en main",
-    "Programmation automates Sofrel S4W",
+    "RTU (Remonte télécontrôle unité)",
     "Maintenance & intervention rapide",
   ];
 
