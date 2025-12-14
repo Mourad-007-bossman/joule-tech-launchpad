@@ -12,7 +12,7 @@ const testimonials = [
     name: "Fatima Benali",
     role: "Responsable Maintenance",
     company: "Société Agricole Nord",
-    content: "Installation de notre station de pompage réalisée avec expertise. La programmation Sofrel S4W fonctionne parfaitement. Service après-vente réactif et efficace.",
+    content: "Installation de notre station de pompage réalisée avec expertise. Le système RTU et SCADA télégestion fonctionne parfaitement. Service après-vente réactif et efficace.",
     rating: 5,
   },
   {

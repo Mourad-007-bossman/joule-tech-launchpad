@@ -12,7 +12,7 @@ interface SEOProps {
 export function SEO({
   title = "Joule Tech | Électricité Industrielle & Pompage à Tanger",
   description = "Expert en installation électrique industrielle, stations de pompage et automatismes à Tanger. Programmation automate, maintenance industrielle, câblage armoire. Devis gratuit.",
-  keywords = "électricité industrielle Tanger, installation station pompage, programmation automate Tanger, câblage armoire électrique, maintenance industrielle, Sofrel S4W, société installation électrique Tanger",
+  keywords = "électricité industrielle Tanger, installation station pompage, programmation automate Tanger, câblage armoire électrique, maintenance industrielle, RTU SCADA télégestion, société installation électrique Tanger",
   image = "https://joule-tech.ma/og-image.jpg",
   url = "https://joule-tech.ma",
   type = "website",

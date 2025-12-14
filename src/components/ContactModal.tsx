@@ -19,7 +19,7 @@ const services = [
   "Câblage Armoire Électrique",
   "Programmation Automate",
   "Maintenance Industrielle",
-  "Programmation Sofrel S4W",
+  "RTU et SCADA Télégestion",
   "Études Installation Électrique",
   "Autre",
 ];
