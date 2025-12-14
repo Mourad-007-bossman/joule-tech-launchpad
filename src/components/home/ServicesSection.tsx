@@ -33,8 +33,8 @@ const services = [
   },
   {
     icon: Settings,
-    title: "Programmation Sofrel S4W",
-    description: "Expert en programmation Sofrel S4W pour télégestion et supervision de réseaux.",
+    title: "RTU et SCADA Télégestion",
+    description: "Expert en RTU (Remonte télécontrôle unité) et SCADA pour télégestion et supervision de réseaux.",
     href: "/services/programmation-sofrel-s4w-tanger",
     color: "primary",
   },

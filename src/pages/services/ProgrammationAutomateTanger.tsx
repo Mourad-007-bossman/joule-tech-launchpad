@@ -182,7 +182,7 @@ const ProgrammationAutomateTanger = () => {
                     <li>
                       <Link to="/services/programmation-sofrel-s4w-tanger" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                         <ArrowRight className="w-4 h-4" />
-                        Programmation Sofrel S4W
+                        RTU et SCADA Télégestion
                       </Link>
                     </li>
                     <li>

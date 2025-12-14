@@ -13,8 +13,8 @@ import serviceImage from "@/assets/service-sofrel-s4w.jpg";
 const features = [
   {
     icon: Radio,
-    title: "Télégestion Sofrel",
-    description: "Configuration et programmation complète des postes locaux Sofrel S4W.",
+    title: "Télégestion RTU",
+    description: "Configuration et programmation complète des RTU (Remonte télécontrôle unité) et systèmes SCADA.",
   },
   {
     icon: Smartphone,
@@ -34,7 +34,7 @@ const features = [
 ];
 
 const benefits = [
-  "Expertise certifiée Sofrel/Lacroix",
+  "Expertise certifiée en télégestion",
   "Configuration optimisée pour le pompage",
   "Intégration SCADA et supervision centrale",
   "Protocoles Modbus, DNP3, IEC 60870",
@@ -48,9 +48,9 @@ const ProgrammationSofrelS4WTanger = () => {
   return (
     <>
       <SEO
-        title="Programmation Sofrel S4W Tanger | Télégestion Station Pompage"
-        description="Expert en programmation Sofrel S4W à Tanger. Télégestion pour stations de pompage, réservoirs, réseaux d'eau. Configuration, mise en service, formation."
-        keywords="programmation Sofrel S4W Tanger, télégestion pompage, Sofrel Lacroix Maroc, supervision station pompage, RTU S4W, télégestion eau Tanger"
+        title="RTU et SCADA Télégestion Tanger | Télégestion Station Pompage"
+        description="Expert en RTU (Remonte télécontrôle unité) et SCADA télégestion à Tanger. Télégestion pour stations de pompage, réservoirs, réseaux d'eau. Configuration, mise en service, formation."
+        keywords="RTU télégestion Tanger, SCADA pompage, télégestion pompage, supervision station pompage, RTU Maroc, télégestion eau Tanger"
         url="https://joule-tech.ma/services/programmation-sofrel-s4w-tanger"
       />
       
@@ -65,7 +65,7 @@ const ProgrammationSofrelS4WTanger = () => {
               <span>/</span>
               <Link to="/services" className="hover:text-primary">Services</Link>
               <span>/</span>
-              <span className="text-foreground">Programmation Sofrel S4W</span>
+              <span className="text-foreground">RTU et SCADA Télégestion</span>
             </div>
           </div>
         </div>
@@ -82,11 +82,11 @@ const ProgrammationSofrelS4WTanger = () => {
                   <Radio className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-                  Programmation Sofrel S4W à Tanger
+                  RTU et SCADA Télégestion à Tanger
                 </h1>
                 <p className="text-xl text-primary-foreground/80 mb-8">
-                  Spécialiste de la télégestion Sofrel pour stations de pompage et réseaux d'eau à Tanger. 
-                  Configuration, programmation et mise en service de postes S4W.
+                  Spécialiste en RTU (Remonte télécontrôle unité) et SCADA télégestion pour stations de pompage et réseaux d'eau à Tanger. 
+                  Configuration, programmation et mise en service complète.
                 </p>
                 <Button variant="hero" size="xl" onClick={() => setIsContactOpen(true)}>
                   Demander un Devis Gratuit
@@ -96,7 +96,7 @@ const ProgrammationSofrelS4WTanger = () => {
               <div className="hidden lg:block">
                 <img 
                   src={serviceImage} 
-                  alt="Programmation Sofrel S4W télégestion à Tanger" 
+                  alt="RTU et SCADA télégestion à Tanger" 
                   className="rounded-2xl shadow-2xl w-full h-auto object-cover"
                 />
               </div>
@@ -112,17 +112,17 @@ const ProgrammationSofrelS4WTanger = () => {
               <div className="lg:col-span-2 space-y-8">
                 <div>
                   <h2 className="text-2xl font-bold text-foreground mb-4">
-                    Expert Sofrel S4W pour la Télégestion de l'Eau
+                    Expert RTU et SCADA pour la Télégestion de l'Eau
                   </h2>
                   <div className="prose text-muted-foreground space-y-4">
                     <p>
-                      <strong className="text-foreground">Joule Tech</strong> est spécialisé dans la 
-                      <strong className="text-foreground"> programmation Sofrel S4W</strong> pour les réseaux d'eau et 
-                      d'assainissement à Tanger et dans le Nord du Maroc. Les postes locaux Sofrel de Lacroix permettent 
+                      <strong className="text-foreground">Joule Tech</strong> est spécialisé dans les 
+                      <strong className="text-foreground"> RTU (Remonte télécontrôle unité) et systèmes SCADA</strong> pour les réseaux d'eau et 
+                      d'assainissement à Tanger et dans le Nord du Maroc. Ces solutions de télégestion permettent 
                       une supervision complète de vos installations de pompage, réservoirs et ouvrages hydrauliques.
                     </p>
                     <p>
-                      Nous configurons vos RTU S4W pour assurer le pilotage automatique de vos pompes, la surveillance 
+                      Nous configurons vos RTU pour assurer le pilotage automatique de vos pompes, la surveillance 
                       des niveaux, débits et pressions, ainsi que la transmission des alarmes en temps réel. Nos programmes 
                       intègrent les logiques de régulation adaptées à chaque type d'ouvrage.
                     </p>

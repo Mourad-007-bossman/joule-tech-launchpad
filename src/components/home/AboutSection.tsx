@@ -39,7 +39,7 @@ export function AboutSection() {
             <p className="text-muted-foreground mb-8">
               Notre expertise couvre l'ensemble du cycle de vie de vos installations : études, conception, 
               installation, programmation, mise en service et maintenance. Nous intervenons sur les automates 
-              programmables, la programmation Sofrel S4W, le câblage d'armoires électriques et bien plus.
+              programmables, les RTU (Remonte télécontrôle unité) et SCADA télégestion, le câblage d'armoires électriques et bien plus.
             </p>
 
             {/* Strengths */}
